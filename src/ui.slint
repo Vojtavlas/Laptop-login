@@ -1,0 +1,37 @@
+export component MainWindow inherits Window {
+    in property <string> status;
+    callback login_clicked;
+
+    VerticalLayout {
+        spacing: 20px;
+        Text {
+            text: "Google Auth Gateway";
+            font-size: 24px;
+            horizontal-alignment: center;
+        }
+        HorizontalLayout {
+            alignment: center;
+            TouchArea {
+                clicked => { root.login_clicked(); }
+                Rectangle {
+                    background:rgb(0, 98, 255);
+                    border-radius: 6px;
+                    height: 40px;
+                    width: 200px;
+                    Text {
+                        text: "Login with Google";
+                        color: white;
+                        font-size: 16px;
+                        vertical-alignment: center;
+                        horizontal-alignment: center;
+                    }
+                }
+            }
+        }
+        Text {
+            text: root.status;
+            color: #888;
+            horizontal-alignment: center;
+        }
+    }
+}
