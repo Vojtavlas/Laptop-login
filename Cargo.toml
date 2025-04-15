@@ -13,4 +13,4 @@ open = "5.0"
 base64 = "0.22" # Or latest version - Added this line
 
 [build-dependencies]
-slint-build = "1.4"
+slint-build = "1.4" 
